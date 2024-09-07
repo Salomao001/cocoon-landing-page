@@ -8,6 +8,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 li {
@@ -44,6 +45,7 @@ a {
     position: fixed;
     width: 100%;
     box-shadow: 0 0 1rem 0.1rem rgb(155, 155, 155);
+    z-index: 1;
 }
 
 .menu-content {
@@ -104,7 +106,7 @@ a {
 }
 
 .main-content {
-    max-width: 90%;
+    max-width: 70%;
     margin: 0 auto;
     padding: 25vh 0;
 }
@@ -116,20 +118,32 @@ a {
     color: black;
 }
 
+.secondary-bg {
+    background: #151515;
+}
+
+.secondary-bg h1,
+.secondary-bg h2,
+.secondary-bg h3 {
+    color: white;
+}
+
+
 .intro-text-content {
     display: flex;
     max-width: 100%;
-    gap: 15rem;
+    gap: 21%;
     align-items: center;
-    margin-bottom: 5rem;
 }
 
 .intro-text-content h2 {
     max-width: 65rem;
     color: #252525;
+    line-height: 5rem;
 }
 
 .intro-text-content p {
+    padding-left: 2rem;
     max-width: 43rem;
     color: rgb(50, 50, 50);
 }
@@ -137,11 +151,115 @@ a {
 .grid-intro {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
+    gap: 1rem;
+}
+
+.grid-intro .img-column {
+    width: 100%;
+    height: auto;
 }
 
 .grid-intro .img-column img {
-
     max-width: 100%;
-    height: 35rem;
+    min-height: 60rem;
+    max-height: 60rem;
+    object-fit: cover;
+}
+
+.grid-about {
+    gap: 21%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
+.main-content {
+    height: 100%;
+}
+
+.about-text p {
+    padding-top: 2.5rem;
+    color: #909090;
+}
+
+.about-img {
+    background: #fff url('/landing-page/assets/img/Startups\ \(5\).png');
+    background-position: -36rem -35rem;
+    right: 27rem;
+    top: 0;
+    position: absolute;
+    width: 55rem;
+    height: 100%;
+}
+
+.about-img img {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 5vh 0;
+}
+
+.content .grid-intro div {
+    padding: 0 3rem;
+}
+
+.content .grid-intro div h3 {
+    padding-bottom: 1rem;
+}
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news-content div {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-content label {
+    font-size: 3rem;
+    color: aliceblue;
+    font-family: "Nunito", sans-serif;
+}
+
+.news-content div div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+.news-content div div input[type="submit"] {
+    width: 20%;
+    cursor: pointer;
+}
+
+.news-content input {
+    width: 80%;
+    height: 5rem;
+    outline: none;
+    padding: 0 1rem;
+}
+
+.footer {
+    height: 6vh;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.footer-content h3 {
+    font-size: 2rem;
 }
